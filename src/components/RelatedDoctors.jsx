@@ -32,12 +32,12 @@ const RelatedDoctors = ({ docId, speciality }) => {
             >
               <img className="bg-blue-50" src={doctor.image} alt="doctorImage" />
               <div className="p-4">
-                <div className="flex items-center gap-2 text-center text-sm text-green-500">
-                  <p>
-                    <GoDotFill />
-                  </p>
-                  <p>Available</p>
-                </div>
+                <div className={`flex items-center gap-2 text-center text-sm ${doctor.available ?  'text-green-500':'text-gray-500' }`}>
+                                <p>
+                                  <GoDotFill />
+                                </p>
+                                <p>Available</p>
+                              </div>
                 <p className="text-lg font-medium text-gray-900">{doctor.name}</p>
                 <p className="text-sm text-gray-600">{doctor.speciality}</p>
               </div>
